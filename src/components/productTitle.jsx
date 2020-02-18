@@ -6,7 +6,7 @@ export default function productTitle(addCount, product) {
       <div class="card" style={{ width: "15rem", margin: "10px" }}>
         <div class="card-body">
           <div class="row">
-            <img src='https://via.placeholder.com/150' height="80px" width="80px" />
+            <img src={product.pic} height="80px" width="80px" />
             <h5 class="card-title" style={{ marginLeft: "10px" }}>{product.title}</h5>
           </div>
           <div class="text-center" style={{ marginTop: "20px" }}>

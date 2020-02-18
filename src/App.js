@@ -1,7 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import productTitle from './components/productTitle';
+import book from "./images/book.jpeg";
+import logo from "./images/logo.jpeg";
+import paper from "./images/paper.jpg";
+import pen from "./images/pen.jpg";
+import pencil from "./images/pencil.jpg";
+import eraser from "./images/eraser.jpg";
 
 class App extends React.Component {
 
@@ -11,28 +17,33 @@ class App extends React.Component {
       cartCount: 0,
       products: [{
         "id": 1,
-        "title": "Oneplus 7T",
-        "clicked": false
+        "title": "Book",
+        "clicked": false,
+        "pic" : book
       },
       {
         "id": 2,
-        "title": "Oneplus 8T",
-        "clicked": false
+        "title": "Paper",
+        "clicked": false,
+        "pic" : paper
       },
       {
         "id": 2,
-        "title": "Oneplus 9T",
-        "clicked": false
+        "title": "Pen",
+        "clicked": false,
+        "pic" : pen
       },
       {
         "id": 2,
-        "title": "Oneplus 10T",
-        "clicked": false
+        "title": "Pencil",
+        "clicked": false,
+        "pic": pencil
       },
       {
         "id": 2,
-        "title": "Oneplus 20T",
-        "clicked": false
+        "title": "Eraser",
+        "clicked": false,
+        "pic" : eraser
       }]
     }
   }
@@ -45,15 +56,16 @@ class App extends React.Component {
     else
       newCount--;
     this.setState({cartCount: newCount});
+    if(newCount >4)
+      alert("Limit Reached");
   }
-
   render() {
     return (
       <div class='container clearfix'>
         <nav class="navbar navbar-expand-lg navbar-light bg-light" style={{ marginTop: "20px" }}>
           <a class="navbar-brand" href="#">
             {this.state.firstState}
-            <img src='https://via.placeholder.com/150' width="60" height="60" />
+            <img src={logo} width="60" height="60" />
           </a>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
